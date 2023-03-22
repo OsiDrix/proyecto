@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <!-- Twitter meta-->
@@ -179,6 +179,7 @@
     <script type="text/javascript" src="js/plugins/moment.min.js"></script>
     <script type="text/javascript" src="js/plugins/jquery-ui.custom.min.js"></script>
     <script type="text/javascript" src="js/plugins/fullcalendar.min.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function() {
       
@@ -201,12 +202,15 @@
       
       	$('#calendar').fullCalendar({
       		header: {
+            locale: 'es',
       			left: 'prev,next today',
       			center: 'title',
       			right: 'month,agendaWeek,agendaDay'
       		},
-      		editable: true,
+          
+      		editable: false,
       		droppable: true, // this allows things to be dropped onto the calendar
+
       		drop: function() {
       			// is the "remove after drop" checkbox checked?
       			if ($('#drop-remove').is(':checked')) {
